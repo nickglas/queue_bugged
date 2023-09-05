@@ -1,0 +1,23 @@
+[
+  {
+    "name": "QueueDemo",
+    "scriptFile": "QueueDemo.dll",
+    "entryPoint": "QueueDemo.Function1.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "message",
+        "direction": "In",
+        "type": "queueTrigger",
+        "queueName": "myqueue",
+        "connection": "Default",
+        "properties": {
+          "supportsDeferredBinding": "True"
+        }
+      }
+    ]
+  }
+]
